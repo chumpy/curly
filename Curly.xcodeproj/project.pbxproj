@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EC142091537F8D200B96E46 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC142081537F8D200B96E46 /* Cocoa.framework */; };
+		3EC142131537F8D200B96E46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EC142111537F8D200B96E46 /* InfoPlist.strings */; };
+		3EC142151537F8D200B96E46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC142141537F8D200B96E46 /* main.m */; };
+		3EC142191537F8D200B96E46 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EC142171537F8D200B96E46 /* Credits.rtf */; };
+		3EC1421C1537F8D200B96E46 /* CurlyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1421B1537F8D200B96E46 /* CurlyDocument.m */; };
+		3EC1421F1537F8D200B96E46 /* CurlyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC1421D1537F8D200B96E46 /* CurlyDocument.xib */; };
+		3EC142221537F8D300B96E46 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC142201537F8D300B96E46 /* MainMenu.xib */; };
+		3EC142251537F8D300B96E46 /* CurlyDocument.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EC142231537F8D300B96E46 /* CurlyDocument.xcdatamodeld */; };
+		3EC1422D1537F8D300B96E46 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC1422C1537F8D300B96E46 /* SenTestingKit.framework */; };
+		3EC1422E1537F8D300B96E46 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC142081537F8D200B96E46 /* Cocoa.framework */; };
+		3EC142361537F8D300B96E46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EC142341537F8D300B96E46 /* InfoPlist.strings */; };
+		3EC142391537F8D300B96E46 /* CurlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC142381537F8D300B96E46 /* CurlyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EC1422F1537F8D300B96E46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EC141FB1537F8D200B96E46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EC142031537F8D200B96E46;
+			remoteInfo = Curly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3EC142041537F8D200B96E46 /* Curly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EC142081537F8D200B96E46 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3EC1420B1537F8D200B96E46 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3EC1420C1537F8D200B96E46 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3EC1420D1537F8D200B96E46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3EC142101537F8D200B96E46 /* Curly-Info.plist */ = {isa = PBXFileReference; path = "Curly-Info.plist"; sourceTree = "<group>"; };
+		3EC142121537F8D200B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3EC142141537F8D200B96E46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3EC142161537F8D200B96E46 /* Curly-Prefix.pch */ = {isa = PBXFileReference; path = "Curly-Prefix.pch"; sourceTree = "<group>"; };
+		3EC142181537F8D200B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3EC1421A1537F8D200B96E46 /* CurlyDocument.h */ = {isa = PBXFileReference; path = CurlyDocument.h; sourceTree = "<group>"; };
+		3EC1421B1537F8D200B96E46 /* CurlyDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurlyDocument.m; sourceTree = "<group>"; };
+		3EC1421E1537F8D200B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CurlyDocument.xib; sourceTree = "<group>"; };
+		3EC142211537F8D300B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3EC142241537F8D300B96E46 /* CurlyDocument.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CurlyDocument.xcdatamodel; sourceTree = "<group>"; };
+		3EC1422B1537F8D300B96E46 /* CurlyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurlyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EC1422C1537F8D300B96E46 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3EC142331537F8D300B96E46 /* CurlyTests-Info.plist */ = {isa = PBXFileReference; path = "CurlyTests-Info.plist"; sourceTree = "<group>"; };
+		3EC142351537F8D300B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3EC142371537F8D300B96E46 /* CurlyTests.h */ = {isa = PBXFileReference; path = CurlyTests.h; sourceTree = "<group>"; };
+		3EC142381537F8D300B96E46 /* CurlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurlyTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EC142011537F8D200B96E46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC142091537F8D200B96E46 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC142271537F8D300B96E46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC1422D1537F8D300B96E46 /* SenTestingKit.framework in Frameworks */,
+				3EC1422E1537F8D300B96E46 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EC141F91537F8D200B96E46 = {
+			isa = PBXGroup;
+			children = (
+				3EC1420E1537F8D200B96E46 /* Curly */,
+				3EC142311537F8D300B96E46 /* CurlyTests */,
+				3EC142071537F8D200B96E46 /* Frameworks */,
+				3EC142051537F8D200B96E46 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EC142051537F8D200B96E46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EC142041537F8D200B96E46 /* Curly.app */,
+				3EC1422B1537F8D300B96E46 /* CurlyTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EC142071537F8D200B96E46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EC142081537F8D200B96E46 /* Cocoa.framework */,
+				3EC1422C1537F8D300B96E46 /* SenTestingKit.framework */,
+				3EC1420A1537F8D200B96E46 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EC1420A1537F8D200B96E46 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EC1420B1537F8D200B96E46 /* AppKit.framework */,
+				3EC1420C1537F8D200B96E46 /* CoreData.framework */,
+				3EC1420D1537F8D200B96E46 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3EC1420E1537F8D200B96E46 /* Curly */ = {
+			isa = PBXGroup;
+			children = (
+				3EC1421A1537F8D200B96E46 /* CurlyDocument.h */,
+				3EC1421B1537F8D200B96E46 /* CurlyDocument.m */,
+				3EC1421D1537F8D200B96E46 /* CurlyDocument.xib */,
+				3EC142201537F8D300B96E46 /* MainMenu.xib */,
+				3EC142231537F8D300B96E46 /* CurlyDocument.xcdatamodeld */,
+				3EC1420F1537F8D200B96E46 /* Supporting Files */,
+			);
+			path = Curly;
+			sourceTree = "<group>";
+		};
+		3EC1420F1537F8D200B96E46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EC142101537F8D200B96E46 /* Curly-Info.plist */,
+				3EC142111537F8D200B96E46 /* InfoPlist.strings */,
+				3EC142141537F8D200B96E46 /* main.m */,
+				3EC142161537F8D200B96E46 /* Curly-Prefix.pch */,
+				3EC142171537F8D200B96E46 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3EC142311537F8D300B96E46 /* CurlyTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EC142371537F8D300B96E46 /* CurlyTests.h */,
+				3EC142381537F8D300B96E46 /* CurlyTests.m */,
+				3EC142321537F8D300B96E46 /* Supporting Files */,
+			);
+			path = CurlyTests;
+			sourceTree = "<group>";
+		};
+		3EC142321537F8D300B96E46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EC142331537F8D300B96E46 /* CurlyTests-Info.plist */,
+				3EC142341537F8D300B96E46 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EC142031537F8D200B96E46 /* Curly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EC1423C1537F8D300B96E46 /* Build configuration list for PBXNativeTarget "Curly" */;
+			buildPhases = (
+				3EC142001537F8D200B96E46 /* Sources */,
+				3EC142011537F8D200B96E46 /* Frameworks */,
+				3EC142021537F8D200B96E46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Curly;
+			productName = Curly;
+			productReference = 3EC142041537F8D200B96E46 /* Curly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3EC1422A1537F8D300B96E46 /* CurlyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EC1423F1537F8D300B96E46 /* Build configuration list for PBXNativeTarget "CurlyTests" */;
+			buildPhases = (
+				3EC142261537F8D300B96E46 /* Sources */,
+				3EC142271537F8D300B96E46 /* Frameworks */,
+				3EC142281537F8D300B96E46 /* Resources */,
+				3EC142291537F8D300B96E46 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EC142301537F8D300B96E46 /* PBXTargetDependency */,
+			);
+			name = CurlyTests;
+			productName = CurlyTests;
+			productReference = 3EC1422B1537F8D300B96E46 /* CurlyTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EC141FB1537F8D200B96E46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Curly;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 3EC141FE1537F8D200B96E46 /* Build configuration list for PBXProject "Curly" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3EC141F91537F8D200B96E46;
+			productRefGroup = 3EC142051537F8D200B96E46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EC142031537F8D200B96E46 /* Curly */,
+				3EC1422A1537F8D300B96E46 /* CurlyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EC142021537F8D200B96E46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC142131537F8D200B96E46 /* InfoPlist.strings in Resources */,
+				3EC142191537F8D200B96E46 /* Credits.rtf in Resources */,
+				3EC1421F1537F8D200B96E46 /* CurlyDocument.xib in Resources */,
+				3EC142221537F8D300B96E46 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC142281537F8D300B96E46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC142361537F8D300B96E46 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EC142291537F8D300B96E46 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EC142001537F8D200B96E46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC142151537F8D200B96E46 /* main.m in Sources */,
+				3EC1421C1537F8D200B96E46 /* CurlyDocument.m in Sources */,
+				3EC142251537F8D300B96E46 /* CurlyDocument.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC142261537F8D300B96E46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC142391537F8D300B96E46 /* CurlyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EC142301537F8D300B96E46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EC142031537F8D200B96E46 /* Curly */;
+			targetProxy = 3EC1422F1537F8D300B96E46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3EC142111537F8D200B96E46 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EC142121537F8D200B96E46 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3EC142171537F8D200B96E46 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EC142181537F8D200B96E46 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3EC1421D1537F8D200B96E46 /* CurlyDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EC1421E1537F8D200B96E46 /* en */,
+			);
+			name = CurlyDocument.xib;
+			sourceTree = "<group>";
+		};
+		3EC142201537F8D300B96E46 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EC142211537F8D300B96E46 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		3EC142341537F8D300B96E46 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EC142351537F8D300B96E46 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EC1423A1537F8D300B96E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3EC1423B1537F8D300B96E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3EC1423D1537F8D300B96E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Curly/Curly-Prefix.pch";
+				INFOPLIST_FILE = "Curly/Curly-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3EC1423E1537F8D300B96E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Curly/Curly-Prefix.pch";
+				INFOPLIST_FILE = "Curly/Curly-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3EC142401537F8D300B96E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Curly.app/Contents/MacOS/Curly";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Curly/Curly-Prefix.pch";
+				INFOPLIST_FILE = "CurlyTests/CurlyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3EC142411537F8D300B96E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Curly.app/Contents/MacOS/Curly";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Curly/Curly-Prefix.pch";
+				INFOPLIST_FILE = "CurlyTests/CurlyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EC141FE1537F8D200B96E46 /* Build configuration list for PBXProject "Curly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EC1423A1537F8D300B96E46 /* Debug */,
+				3EC1423B1537F8D300B96E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EC1423C1537F8D300B96E46 /* Build configuration list for PBXNativeTarget "Curly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EC1423D1537F8D300B96E46 /* Debug */,
+				3EC1423E1537F8D300B96E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3EC1423F1537F8D300B96E46 /* Build configuration list for PBXNativeTarget "CurlyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EC142401537F8D300B96E46 /* Debug */,
+				3EC142411537F8D300B96E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3EC142231537F8D300B96E46 /* CurlyDocument.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3EC142241537F8D300B96E46 /* CurlyDocument.xcdatamodel */,
+			);
+			currentVersion = 3EC142241537F8D300B96E46 /* CurlyDocument.xcdatamodel */;
+			path = CurlyDocument.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3EC141FB1537F8D200B96E46 /* Project object */;
+}
