@@ -37,21 +37,21 @@
 		3EC1420B1537F8D200B96E46 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3EC1420C1537F8D200B96E46 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3EC1420D1537F8D200B96E46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3EC142101537F8D200B96E46 /* Curly-Info.plist */ = {isa = PBXFileReference; path = "Curly-Info.plist"; sourceTree = "<group>"; };
+		3EC142101537F8D200B96E46 /* Curly-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Curly-Info.plist"; sourceTree = "<group>"; };
 		3EC142121537F8D200B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3EC142141537F8D200B96E46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3EC142161537F8D200B96E46 /* Curly-Prefix.pch */ = {isa = PBXFileReference; path = "Curly-Prefix.pch"; sourceTree = "<group>"; };
+		3EC142161537F8D200B96E46 /* Curly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Curly-Prefix.pch"; sourceTree = "<group>"; };
 		3EC142181537F8D200B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		3EC1421A1537F8D200B96E46 /* CurlyDocument.h */ = {isa = PBXFileReference; path = CurlyDocument.h; sourceTree = "<group>"; };
+		3EC1421A1537F8D200B96E46 /* CurlyDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurlyDocument.h; sourceTree = "<group>"; };
 		3EC1421B1537F8D200B96E46 /* CurlyDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurlyDocument.m; sourceTree = "<group>"; };
 		3EC1421E1537F8D200B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CurlyDocument.xib; sourceTree = "<group>"; };
 		3EC142211537F8D300B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3EC142241537F8D300B96E46 /* CurlyDocument.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CurlyDocument.xcdatamodel; sourceTree = "<group>"; };
 		3EC1422B1537F8D300B96E46 /* CurlyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurlyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC1422C1537F8D300B96E46 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		3EC142331537F8D300B96E46 /* CurlyTests-Info.plist */ = {isa = PBXFileReference; path = "CurlyTests-Info.plist"; sourceTree = "<group>"; };
+		3EC142331537F8D300B96E46 /* CurlyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CurlyTests-Info.plist"; sourceTree = "<group>"; };
 		3EC142351537F8D300B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3EC142371537F8D300B96E46 /* CurlyTests.h */ = {isa = PBXFileReference; path = CurlyTests.h; sourceTree = "<group>"; };
+		3EC142371537F8D300B96E46 /* CurlyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurlyTests.h; sourceTree = "<group>"; };
 		3EC142381537F8D300B96E46 /* CurlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurlyTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
