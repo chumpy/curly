@@ -19,6 +19,7 @@
 		3EC1422E1537F8D300B96E46 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC142081537F8D200B96E46 /* Cocoa.framework */; };
 		3EC142361537F8D300B96E46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EC142341537F8D300B96E46 /* InfoPlist.strings */; };
 		3EC142391537F8D300B96E46 /* CurlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC142381537F8D300B96E46 /* CurlyTests.m */; };
+		3EC1424815636E6F00B96E46 /* CurlyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1424715636E6F00B96E46 /* CurlyController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		3EC142351537F8D300B96E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3EC142371537F8D300B96E46 /* CurlyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurlyTests.h; sourceTree = "<group>"; };
 		3EC142381537F8D300B96E46 /* CurlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurlyTests.m; sourceTree = "<group>"; };
+		3EC1424615636E6F00B96E46 /* CurlyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurlyController.h; sourceTree = "<group>"; };
+		3EC1424715636E6F00B96E46 /* CurlyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurlyController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				3EC142201537F8D300B96E46 /* MainMenu.xib */,
 				3EC142231537F8D300B96E46 /* CurlyDocument.xcdatamodeld */,
 				3EC1420F1537F8D200B96E46 /* Supporting Files */,
+				3EC1424615636E6F00B96E46 /* CurlyController.h */,
+				3EC1424715636E6F00B96E46 /* CurlyController.m */,
 			);
 			path = Curly;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				3EC142151537F8D200B96E46 /* main.m in Sources */,
 				3EC1421C1537F8D200B96E46 /* CurlyDocument.m in Sources */,
 				3EC142251537F8D300B96E46 /* CurlyDocument.xcdatamodeld in Sources */,
+				3EC1424815636E6F00B96E46 /* CurlyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +458,7 @@
 				3EC1423E1537F8D300B96E46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EC1423F1537F8D300B96E46 /* Build configuration list for PBXNativeTarget "CurlyTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +467,7 @@
 				3EC142411537F8D300B96E46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

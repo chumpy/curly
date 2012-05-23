@@ -9,5 +9,8 @@
 #import <Cocoa/Cocoa.h>
 
 @interface CurlyDocument : NSPersistentDocument
+@property (weak) IBOutlet NSTextField *url;
+- (IBAction)go:(NSButton *)sender;
+@property (weak) IBOutlet NSPopUpButton *method;
 
 @end

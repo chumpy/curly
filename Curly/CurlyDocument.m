@@ -3,12 +3,15 @@
 //  Curly
 //
 //  Created by Kevin Beddingfield on 4/12/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Kevin Beddingfield. All rights reserved.
 //
 
 #import "CurlyDocument.h"
 
+
 @implementation CurlyDocument
+@synthesize method;
+@synthesize url;
 
 - (id)init
 {
@@ -37,4 +40,13 @@
     return YES;
 }
 
+- (IBAction)go:(NSButton *)sender {
+    NSURL *urlFromTextField = [NSURL URLWithString:[url stringValue]];
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:urlFromTextField];
+    [req setHTTPMethod:[method stringValue]];
+    NSError *requestError;
+    NSURLResponse *urlResponse = nil;
+    [NSURLConnection  sendSynchronousRequest:req returningResponse:&urlResponse error:&requestError];
+    
+}
 @end
