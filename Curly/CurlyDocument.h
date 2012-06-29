@@ -15,5 +15,6 @@
 @property (weak) IBOutlet NSTabViewItem *responseTab;
 @property (unsafe_unretained) IBOutlet NSTextView *responseTextView;
 
+@property (unsafe_unretained) IBOutlet NSTextView *requestTextView;
 
 @end

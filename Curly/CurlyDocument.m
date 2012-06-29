@@ -13,6 +13,7 @@
 @synthesize method;
 @synthesize responseTab;
 @synthesize responseTextView;
+@synthesize requestTextView;
 @synthesize url;
 
 - (id)init
