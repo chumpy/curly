@@ -12,5 +12,8 @@
 @property (weak) IBOutlet NSTextField *url;
 - (IBAction)go:(NSButton *)sender;
 @property (weak) IBOutlet NSPopUpButton *method;
+@property (weak) IBOutlet NSTabViewItem *responseTab;
+@property (unsafe_unretained) IBOutlet NSTextView *responseTextView;
+
 
 @end

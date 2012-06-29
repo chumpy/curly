@@ -11,6 +11,8 @@
 
 @implementation CurlyDocument
 @synthesize method;
+@synthesize responseTab;
+@synthesize responseTextView;
 @synthesize url;
 
 - (id)init
@@ -43,10 +45,11 @@
 - (IBAction)go:(NSButton *)sender {
     NSURL *urlFromTextField = [NSURL URLWithString:[url stringValue]];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:urlFromTextField];
-    [req setHTTPMethod:[method stringValue]];
+    [req setHTTPMethod:[method titleOfSelectedItem]];
     NSError *requestError;
     NSURLResponse *urlResponse = nil;
-    [NSURLConnection  sendSynchronousRequest:req returningResponse:&urlResponse error:&requestError];
-    
+    NSData *returnData = [NSURLConnection  sendSynchronousRequest:req returningResponse:&urlResponse error:&requestError];
+    [responseTextView setString:[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding]];    
 }
+
 @end
