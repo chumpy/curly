@@ -46,13 +46,26 @@
 }
 
 - (IBAction)go:(NSButton *)sender {
+    //setup request
     NSURL *urlFromTextField = [NSURL URLWithString:[url stringValue]];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:urlFromTextField];
-    [req setHTTPMethod:[method titleOfSelectedItem]];
+    NSString *methodString = [method titleOfSelectedItem];
+    if([methodString isEqualTo:@"POST"] || [methodString isEqualTo:@"PUT"])
+    {
+        NSString *reqBody = [requestTextView string];
+        [req setHTTPBody:[reqBody dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+    [req setHTTPMethod:methodString];
     NSError *requestError;
     NSHTTPURLResponse *urlResponse = nil;
+    
+    //make requst
     NSData *returnData = [NSURLConnection  sendSynchronousRequest:req returningResponse:&urlResponse error:&requestError];
-    [responseTextView setString:[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding]];  
+    
+    //update response body
+    [responseTextView setString:[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding]];
+    
+    //update response headers
     if ([urlResponse respondsToSelector:@selector(allHeaderFields)]) {
 		NSDictionary *dictionary = [urlResponse allHeaderFields];
         [headerTableDatasource setHeaderView:responseHeadersView];
