@@ -49,7 +49,12 @@
     //setup request
     NSURL *urlFromTextField = [NSURL URLWithString:[url stringValue]];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:urlFromTextField];
+    [req setHTTPShouldHandleCookies:NO];
+    
+    //get the method ahead of time
     NSString *methodString = [method titleOfSelectedItem];
+    
+    //include request body for PUT or POST
     if([methodString isEqualTo:@"POST"] || [methodString isEqualTo:@"PUT"])
     {
         NSString *reqBody = [requestTextView string];
