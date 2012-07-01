@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "HeaderTableDatasource.h"
 
 @interface CurlyDocument : NSPersistentDocument
 @property (weak) IBOutlet NSTextField *url;
@@ -16,5 +17,7 @@
 @property (unsafe_unretained) IBOutlet NSTextView *responseTextView;
 
 @property (unsafe_unretained) IBOutlet NSTextView *requestTextView;
+@property (weak) IBOutlet NSTableView *responseHeadersView;
+@property (strong) IBOutlet HeaderTableDatasource *headerTableDatasource;
 
 @end

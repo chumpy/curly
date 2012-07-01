@@ -14,6 +14,8 @@
 @synthesize responseTab;
 @synthesize responseTextView;
 @synthesize requestTextView;
+@synthesize responseHeadersView;
+@synthesize headerTableDatasource;
 @synthesize url;
 
 - (id)init
@@ -48,9 +50,16 @@
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:urlFromTextField];
     [req setHTTPMethod:[method titleOfSelectedItem]];
     NSError *requestError;
-    NSURLResponse *urlResponse = nil;
+    NSHTTPURLResponse *urlResponse = nil;
     NSData *returnData = [NSURLConnection  sendSynchronousRequest:req returningResponse:&urlResponse error:&requestError];
-    [responseTextView setString:[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding]];    
+    [responseTextView setString:[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding]];  
+    if ([urlResponse respondsToSelector:@selector(allHeaderFields)]) {
+		NSDictionary *dictionary = [urlResponse allHeaderFields];
+        [headerTableDatasource setHeaderView:responseHeadersView];
+        [headerTableDatasource setDictionary:dictionary];
+		[responseHeadersView reloadData];
+	}
+    
 }
 
 @end
