@@ -35,6 +35,12 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     
 }   
 
+- (void)addHeaderToTable:(NSString*)key value:(NSString*)value
+{
+    [dictionary setObject:value forKey:key];
+    [headerView reloadData];
+}
+
 
 
 

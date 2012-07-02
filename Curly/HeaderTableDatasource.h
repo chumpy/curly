@@ -10,8 +10,10 @@
 
 @interface HeaderTableDatasource : NSObject
 
-@property NSDictionary *dictionary;
+@property NSMutableDictionary *dictionary;
 @property NSTableView *headerView;
+
+- (void)addHeaderToTable:(id)key value:(id)value;
 
 
 @end

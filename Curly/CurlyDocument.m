@@ -10,12 +10,16 @@
 
 
 @implementation CurlyDocument
+@synthesize addReqHeaderValueText;
 @synthesize method;
 @synthesize responseTab;
+@synthesize requestHeadersView;
 @synthesize responseTextView;
 @synthesize requestTextView;
 @synthesize responseHeadersView;
 @synthesize headerTableDatasource;
+@synthesize reqHeaderTableDatasource;
+@synthesize addReqHeaderKeyText;
 @synthesize url;
 
 - (id)init
@@ -45,24 +49,43 @@
     return YES;
 }
 
-- (IBAction)go:(NSButton *)sender {
-    //setup request
+- (void)updateResponseHeaders:(NSHTTPURLResponse *)urlResponse {
+    if ([urlResponse respondsToSelector:@selector(allHeaderFields)]) {
+		NSMutableDictionary *dictionary = (NSMutableDictionary *)[urlResponse allHeaderFields];
+        [headerTableDatasource setHeaderView:responseHeadersView];
+        [headerTableDatasource setDictionary:dictionary];
+		[responseHeadersView reloadData];
+	}
+}
+
+- (void)setupRequest:(NSMutableURLRequest **)req_p urlResponse_p:(NSHTTPURLResponse **)urlResponse_p {
     NSURL *urlFromTextField = [NSURL URLWithString:[url stringValue]];
-    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:urlFromTextField];
-    [req setHTTPShouldHandleCookies:NO];
+    *req_p = [NSMutableURLRequest requestWithURL:urlFromTextField];
     
-    //get the method ahead of time
+    //do not use sessions from safari
+    [*req_p setHTTPShouldHandleCookies:NO];
+    
+    //set request headers
+    [*req_p setAllHTTPHeaderFields:[reqHeaderTableDatasource dictionary]];
+    
+    //get the method verb ahead of time
     NSString *methodString = [method titleOfSelectedItem];
     
     //include request body for PUT or POST
     if([methodString isEqualTo:@"POST"] || [methodString isEqualTo:@"PUT"])
     {
         NSString *reqBody = [requestTextView string];
-        [req setHTTPBody:[reqBody dataUsingEncoding:NSUTF8StringEncoding]];
+        [*req_p setHTTPBody:[reqBody dataUsingEncoding:NSUTF8StringEncoding]];
     }
-    [req setHTTPMethod:methodString];
+    [*req_p setHTTPMethod:methodString];
+    
+}
+
+- (IBAction)go:(NSButton *)sender {
+    NSMutableURLRequest *req;
     NSError *requestError;
-    NSHTTPURLResponse *urlResponse = nil;
+    NSHTTPURLResponse *urlResponse;
+    [self setupRequest:&req urlResponse_p:&urlResponse];
     
     //make requst
     NSData *returnData = [NSURLConnection  sendSynchronousRequest:req returningResponse:&urlResponse error:&requestError];
@@ -70,14 +93,21 @@
     //update response body
     [responseTextView setString:[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding]];
     
-    //update response headers
-    if ([urlResponse respondsToSelector:@selector(allHeaderFields)]) {
-		NSDictionary *dictionary = [urlResponse allHeaderFields];
-        [headerTableDatasource setHeaderView:responseHeadersView];
-        [headerTableDatasource setDictionary:dictionary];
-		[responseHeadersView reloadData];
-	}
+    [self updateResponseHeaders:urlResponse];
+    
+    
     
 }
 
+- (IBAction)addReqHeader:(id)sender {
+    NSString *key = [addReqHeaderKeyText stringValue];
+    NSString *value = [addReqHeaderValueText stringValue];
+    if([[reqHeaderTableDatasource dictionary] count] <= 0){
+        NSMutableDictionary *mutDictionary;
+        mutDictionary = [NSMutableDictionary dictionary];
+        [reqHeaderTableDatasource setDictionary:mutDictionary];
+    }
+    [reqHeaderTableDatasource setHeaderView:requestHeadersView];
+    [reqHeaderTableDatasource addHeaderToTable:key value:value];
+}
 @end

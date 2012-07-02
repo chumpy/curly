@@ -14,10 +14,17 @@
 - (IBAction)go:(NSButton *)sender;
 @property (weak) IBOutlet NSPopUpButton *method;
 @property (weak) IBOutlet NSTabViewItem *responseTab;
+@property (weak) IBOutlet NSTableView *requestHeadersView;
+
 @property (unsafe_unretained) IBOutlet NSTextView *responseTextView;
 
 @property (unsafe_unretained) IBOutlet NSTextView *requestTextView;
 @property (weak) IBOutlet NSTableView *responseHeadersView;
 @property (strong) IBOutlet HeaderTableDatasource *headerTableDatasource;
+@property (strong) IBOutlet HeaderTableDatasource *reqHeaderTableDatasource;
+@property (weak) IBOutlet NSTextField *addReqHeaderKeyText;
+
+- (IBAction)addReqHeader:(id)sender;
+@property (weak) IBOutlet NSTextField *addReqHeaderValueText;
 
 @end
