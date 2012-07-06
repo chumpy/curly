@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import "HeaderTableDatasource.h"
+#import "NSData+Base64.h"
+
 
 @interface CurlyDocument : NSPersistentDocument
 @property (weak) IBOutlet NSTextField *url;
@@ -26,5 +28,8 @@
 
 - (IBAction)addReqHeader:(id)sender;
 @property (weak) IBOutlet NSTextField *addReqHeaderValueText;
+@property (weak) IBOutlet NSButton *useBasicAuth;
+@property (weak) IBOutlet NSTextField *basicAuthUsername;
+@property (weak) IBOutlet NSTextField *basicAuthPassword;
 
 @end

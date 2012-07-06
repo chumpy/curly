@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E68200215A6BFD6004EB548 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E68200115A6BFD6004EB548 /* NSData+Base64.m */; };
 		3EC142091537F8D200B96E46 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC142081537F8D200B96E46 /* Cocoa.framework */; };
 		3EC142131537F8D200B96E46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EC142111537F8D200B96E46 /* InfoPlist.strings */; };
 		3EC142151537F8D200B96E46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC142141537F8D200B96E46 /* main.m */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E68200015A6BFD6004EB548 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		3E68200115A6BFD6004EB548 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		3EC142041537F8D200B96E46 /* Curly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC142081537F8D200B96E46 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3EC1420B1537F8D200B96E46 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -121,6 +124,8 @@
 		3EC1420E1537F8D200B96E46 /* Curly */ = {
 			isa = PBXGroup;
 			children = (
+				3E68200015A6BFD6004EB548 /* NSData+Base64.h */,
+				3E68200115A6BFD6004EB548 /* NSData+Base64.m */,
 				3ED54C1A15A011EB00D7E399 /* HeaderTableDatasource.h */,
 				3ED54C1B15A011EB00D7E399 /* HeaderTableDatasource.m */,
 				3EC1421A1537F8D200B96E46 /* CurlyDocument.h */,
@@ -277,6 +282,7 @@
 				3EC1421C1537F8D200B96E46 /* CurlyDocument.m in Sources */,
 				3EC142251537F8D300B96E46 /* CurlyDocument.xcdatamodeld in Sources */,
 				3ED54C1C15A011EB00D7E399 /* HeaderTableDatasource.m in Sources */,
+				3E68200215A6BFD6004EB548 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

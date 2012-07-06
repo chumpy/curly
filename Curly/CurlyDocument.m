@@ -11,6 +11,9 @@
 
 @implementation CurlyDocument
 @synthesize addReqHeaderValueText;
+@synthesize useBasicAuth;
+@synthesize basicAuthUsername;
+@synthesize basicAuthPassword;
 @synthesize method;
 @synthesize responseTab;
 @synthesize requestHeadersView;
@@ -86,6 +89,14 @@
     NSError *requestError;
     NSHTTPURLResponse *urlResponse;
     [self setupRequest:&req urlResponse_p:&urlResponse];
+   
+    if([useBasicAuth state] == 1) {
+        NSString *authStr = [NSString stringWithFormat:@"%@:%@", [basicAuthUsername stringValue], [basicAuthPassword stringValue]];
+        NSData *authData = [authStr dataUsingEncoding:NSASCIIStringEncoding];
+        NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64EncodingWithLineLength:80]];
+        [req setValue:authValue forHTTPHeaderField:@"Authorization"];
+        
+    }
     
     //make requst
     NSData *returnData = [NSURLConnection  sendSynchronousRequest:req returningResponse:&urlResponse error:&requestError];
