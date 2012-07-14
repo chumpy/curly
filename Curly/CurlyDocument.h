@@ -25,6 +25,7 @@
 @property (strong) IBOutlet HeaderTableDatasource *headerTableDatasource;
 @property (strong) IBOutlet HeaderTableDatasource *reqHeaderTableDatasource;
 @property (weak) IBOutlet NSTextField *addReqHeaderKeyText;
+@property (weak) IBOutlet NSButton *followRedirects;
 
 - (IBAction)addReqHeader:(id)sender;
 @property (weak) IBOutlet NSTextField *addReqHeaderValueText;

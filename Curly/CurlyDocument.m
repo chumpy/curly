@@ -23,6 +23,7 @@
 @synthesize headerTableDatasource;
 @synthesize reqHeaderTableDatasource;
 @synthesize addReqHeaderKeyText;
+@synthesize followRedirects;
 @synthesize url;
 
 - (id)init
@@ -98,9 +99,10 @@
         
     }
     
+    
     //make requst
     NSData *returnData = [NSURLConnection  sendSynchronousRequest:req returningResponse:&urlResponse error:&requestError];
-    
+   
     //update response body
     [responseTextView setString:[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding]];
     
