@@ -106,8 +106,9 @@
     
     [self updateResponseHeaders:urlResponse];
     
-    
-    
+    // Show the response body tab after request is made
+    NSTabView *parentTabView = [responseTab tabView];
+    [parentTabView selectTabViewItemAtIndex:(1)];
 }
 
 - (IBAction)addReqHeader:(id)sender {
