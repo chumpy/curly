@@ -75,7 +75,14 @@
         [headerTableDatasource setDictionary:[root objectForKey:@"response_headers"]];
     
     }
-   
+    if([root objectForKey:@"use_basic_auth"] != nil)
+    {
+        [useBasicAuth setState:(NSInteger)[root objectForKey:@"use_basic_auth"]];
+    }
+    if([root objectForKey:@"follow_redirects"] != nil)
+    {
+        [useBasicAuth setState:(NSInteger)[root objectForKey:@"follow_redirects"]];
+    }
 }
 
 + (BOOL)autosavesInPlace
@@ -97,6 +104,8 @@
     [root setObject:[responseTextView string] forKey:@"response_body"];
     [root setObject:[reqHeaderTableDatasource dictionary] forKey:@"request_headers"];
     [root setObject:[headerTableDatasource dictionary] forKey:@"response_headers"];
+    [root setObject:[NSString stringWithFormat:@"%i",[useBasicAuth state]] forKey:@"use_basic_auth"];
+    [root setObject:[NSString stringWithFormat:@"%i",[followRedirects state]] forKey:@"follow_redirects"];
     return [NSKeyedArchiver archivedDataWithRootObject:root];
     
 }
