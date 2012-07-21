@@ -41,7 +41,4 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     [headerView reloadData];
 }
 
-
-
-
 @end

@@ -25,12 +25,13 @@
 @synthesize addReqHeaderKeyText;
 @synthesize followRedirects;
 @synthesize url;
+@synthesize root;
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        root = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -46,12 +47,60 @@
 {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
+    
+    if([root objectForKey:@"url"] != nil)
+    {
+        [url setStringValue:[root objectForKey:@"url"]];
+
+    }
+    if([root objectForKey:@"request_body"] != nil)
+    {
+        [requestTextView setString:[root objectForKey:@"request_body"]];
+    
+    }
+    if([root objectForKey:@"response_body"] != nil)
+    {
+        [responseTextView setString:[root objectForKey:@"response_body"]];
+    
+    }
+    if([root objectForKey:@"request_headers"] != nil)
+    {
+        [reqHeaderTableDatasource setHeaderView:requestHeadersView];
+        [reqHeaderTableDatasource setDictionary:[root objectForKey:@"request_headers"]];
+    
+    }
+    if([root objectForKey:@"response_headers"] != nil)
+    {
+        [headerTableDatasource setHeaderView:responseHeadersView];
+        [headerTableDatasource setDictionary:[root objectForKey:@"response_headers"]];
+    
+    }
+   
 }
 
 + (BOOL)autosavesInPlace
 {
     return YES;
 }
+
+- (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError *__autoreleasing *)outError
+{
+    root = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    return YES;
+}
+
+- (NSData *)dataOfType:(NSString *)aType error:(NSError **)outError
+{
+    [root setObject:[url stringValue] forKey:@"url"];
+    [root setObject:[requestTextView string] forKey:@"request_body"];  
+    [root setObject:[responseTextView string] forKey:@"response_body"];
+    [root setObject:[reqHeaderTableDatasource dictionary] forKey:@"request_headers"];
+    [root setObject:[headerTableDatasource dictionary] forKey:@"response_headers"];
+    return [NSKeyedArchiver archivedDataWithRootObject:root];
+    
+}
+
 
 - (void)updateResponseHeaders:(NSHTTPURLResponse *)urlResponse {
     if ([urlResponse respondsToSelector:@selector(allHeaderFields)]) {

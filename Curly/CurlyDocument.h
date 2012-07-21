@@ -11,7 +11,7 @@
 #import "NSData+Base64.h"
 
 
-@interface CurlyDocument : NSPersistentDocument
+@interface CurlyDocument : NSDocument
 @property (weak) IBOutlet NSTextField *url;
 - (IBAction)go:(NSButton *)sender;
 @property (weak) IBOutlet NSPopUpButton *method;
@@ -33,4 +33,5 @@
 @property (weak) IBOutlet NSTextField *basicAuthUsername;
 @property (weak) IBOutlet NSTextField *basicAuthPassword;
 
+@property NSMutableDictionary * root;
 @end
