@@ -22,9 +22,7 @@
 @synthesize responseHeadersView;
 @synthesize headerTableDatasource;
 @synthesize reqHeaderTableDatasource;
-@synthesize addReqHeaderKeyText;
-@synthesize followRedirects;
-@synthesize url;
+@synthesize addReqHeaderKeyText;@synthesize url;
 @synthesize root;
 
 - (id)init
@@ -79,10 +77,7 @@
     {
         [useBasicAuth setState:(NSInteger)[root objectForKey:@"use_basic_auth"]];
     }
-    if([root objectForKey:@"follow_redirects"] != nil)
-    {
-        [useBasicAuth setState:(NSInteger)[root objectForKey:@"follow_redirects"]];
-    }
+   
 }
 
 + (BOOL)autosavesInPlace
@@ -102,10 +97,15 @@
     [root setObject:[url stringValue] forKey:@"url"];
     [root setObject:[requestTextView string] forKey:@"request_body"];  
     [root setObject:[responseTextView string] forKey:@"response_body"];
-    [root setObject:[reqHeaderTableDatasource dictionary] forKey:@"request_headers"];
-    [root setObject:[headerTableDatasource dictionary] forKey:@"response_headers"];
+    if([reqHeaderTableDatasource dictionary] != nil)
+    {
+        [root setObject:[reqHeaderTableDatasource dictionary] forKey:@"request_headers"];
+    }
+    if([headerTableDatasource dictionary] != nil)
+    {
+        [root setObject:[headerTableDatasource dictionary] forKey:@"response_headers"];
+    }
     [root setObject:[NSString stringWithFormat:@"%i",[useBasicAuth state]] forKey:@"use_basic_auth"];
-    [root setObject:[NSString stringWithFormat:@"%i",[followRedirects state]] forKey:@"follow_redirects"];
     return [NSKeyedArchiver archivedDataWithRootObject:root];
     
 }
