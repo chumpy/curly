@@ -41,10 +41,25 @@
     return @"CurlyDocument";
 }
 
+- (void)setDefaultRequestHeaders
+{
+    if([[reqHeaderTableDatasource dictionary] count] <= 0){
+        NSMutableDictionary *mutDictionary;
+        mutDictionary = [NSMutableDictionary dictionary];
+        [reqHeaderTableDatasource setDictionary:mutDictionary];
+    }
+    [reqHeaderTableDatasource setHeaderView:requestHeadersView];
+    [reqHeaderTableDatasource addHeaderToTable:@"User-Agent" value:@"curly"];
+}
+
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
+    
+    
+    // Set default request headers
+    [self setDefaultRequestHeaders];
     
     if([root objectForKey:@"url"] != nil)
     {

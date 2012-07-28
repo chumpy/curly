@@ -12,6 +12,7 @@
 
 
 @interface CurlyDocument : NSDocument
+- (void)setDefaultRequestHeaders;
 @property (weak) IBOutlet NSTextField *url;
 - (IBAction)go:(NSButton *)sender;
 @property (weak) IBOutlet NSPopUpButton *method;
