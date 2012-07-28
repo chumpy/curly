@@ -12,9 +12,9 @@
 @synthesize dictionary;
 @synthesize headerView;
 
-- (int)numberOfRowsInTableView:(NSTableView*) aTableView
+- (long)numberOfRowsInTableView:(NSTableView*) aTableView
 {
-    int myCount = [dictionary count];
+    long myCount = [dictionary count];
     return myCount;
 }
 

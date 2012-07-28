@@ -120,7 +120,7 @@
     {
         [root setObject:[headerTableDatasource dictionary] forKey:@"response_headers"];
     }
-    [root setObject:[NSString stringWithFormat:@"%i",[useBasicAuth state]] forKey:@"use_basic_auth"];
+    [root setObject:[NSString stringWithFormat:@"%l",[useBasicAuth state]] forKey:@"use_basic_auth"];
     return [NSKeyedArchiver archivedDataWithRootObject:root];
     
 }

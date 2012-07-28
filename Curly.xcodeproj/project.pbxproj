@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E2B49E015C335CC0063FD43 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B49DF15C335CC0063FD43 /* icon.icns */; };
 		3E68200215A6BFD6004EB548 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E68200115A6BFD6004EB548 /* NSData+Base64.m */; };
-		3E7F2FE415C4675100BD42BB /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F2FE315C4675100BD42BB /* icon.icns */; };
 		3EC142091537F8D200B96E46 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC142081537F8D200B96E46 /* Cocoa.framework */; };
 		3EC142131537F8D200B96E46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EC142111537F8D200B96E46 /* InfoPlist.strings */; };
 		3EC142151537F8D200B96E46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC142141537F8D200B96E46 /* main.m */; };
@@ -221,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Curly;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = 3EC141FE1537F8D200B96E46 /* Build configuration list for PBXProject "Curly" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -251,7 +250,6 @@
 				3EC1421F1537F8D200B96E46 /* CurlyDocument.xib in Resources */,
 				3EC142221537F8D300B96E46 /* MainMenu.xib in Resources */,
 				3E2B49E015C335CC0063FD43 /* icon.icns in Resources */,
-				3E7F2FE415C4675100BD42BB /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +404,7 @@
 		3EC1423D1537F8D300B96E46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Curly/Curly-Prefix.pch";
 				INFOPLIST_FILE = "Curly/Curly-Info.plist";
@@ -417,6 +416,7 @@
 		3EC1423E1537F8D300B96E46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Curly/Curly-Prefix.pch";
 				INFOPLIST_FILE = "Curly/Curly-Info.plist";
@@ -429,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Curly.app/Contents/MacOS/Curly";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Curly/Curly-Prefix.pch";
@@ -443,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Curly.app/Contents/MacOS/Curly";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Curly/Curly-Prefix.pch";
