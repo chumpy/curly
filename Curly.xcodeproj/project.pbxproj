@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E1E014F15BFD8A700ABDABB /* curly.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E1E014E15BFD8A700ABDABB /* curly.icns */; };
+		3E2B49E015C335CC0063FD43 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B49DF15C335CC0063FD43 /* icon.icns */; };
 		3E68200215A6BFD6004EB548 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E68200115A6BFD6004EB548 /* NSData+Base64.m */; };
+		3E7F2FE415C4675100BD42BB /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F2FE315C4675100BD42BB /* icon.icns */; };
 		3EC142091537F8D200B96E46 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC142081537F8D200B96E46 /* Cocoa.framework */; };
 		3EC142131537F8D200B96E46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EC142111537F8D200B96E46 /* InfoPlist.strings */; };
 		3EC142151537F8D200B96E46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC142141537F8D200B96E46 /* main.m */; };
@@ -35,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3E1E014E15BFD8A700ABDABB /* curly.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = curly.icns; sourceTree = "<group>"; };
+		3E2B49DF15C335CC0063FD43 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		3E68200015A6BFD6004EB548 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		3E68200115A6BFD6004EB548 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		3E7F2FE315C4675100BD42BB /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		3EC142041537F8D200B96E46 /* Curly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC142081537F8D200B96E46 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3EC1420B1537F8D200B96E46 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -87,7 +89,8 @@
 		3EC141F91537F8D200B96E46 = {
 			isa = PBXGroup;
 			children = (
-				3E1E014E15BFD8A700ABDABB /* curly.icns */,
+				3E7F2FE315C4675100BD42BB /* icon.icns */,
+				3E2B49DF15C335CC0063FD43 /* icon.icns */,
 				3EC1420E1537F8D200B96E46 /* Curly */,
 				3EC142311537F8D300B96E46 /* CurlyTests */,
 				3EC142071537F8D200B96E46 /* Frameworks */,
@@ -247,7 +250,8 @@
 				3EC142191537F8D200B96E46 /* Credits.rtf in Resources */,
 				3EC1421F1537F8D200B96E46 /* CurlyDocument.xib in Resources */,
 				3EC142221537F8D300B96E46 /* MainMenu.xib in Resources */,
-				3E1E014F15BFD8A700ABDABB /* curly.icns in Resources */,
+				3E2B49E015C335CC0063FD43 /* icon.icns in Resources */,
+				3E7F2FE415C4675100BD42BB /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

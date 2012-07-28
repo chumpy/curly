@@ -36,7 +36,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>curly.icns</string>
+	<string>icon</string>
 	<key>CFBundleIdentifier</key>
 	<string>mamba.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
