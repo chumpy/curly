@@ -26,6 +26,7 @@
 @property (strong) IBOutlet HeaderTableDatasource *headerTableDatasource;
 @property (strong) IBOutlet HeaderTableDatasource *reqHeaderTableDatasource;
 @property (weak) IBOutlet NSTextField *addReqHeaderKeyText;
+- (IBAction)clearRequestHeaders:(id)sender;
 
 
 - (IBAction)addReqHeader:(id)sender;

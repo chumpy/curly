@@ -120,7 +120,7 @@
     {
         [root setObject:[headerTableDatasource dictionary] forKey:@"response_headers"];
     }
-    [root setObject:[NSString stringWithFormat:@"%l",[useBasicAuth state]] forKey:@"use_basic_auth"];
+    [root setObject:[NSString stringWithFormat:@"%ld",[useBasicAuth state]] forKey:@"use_basic_auth"];
     return [NSKeyedArchiver archivedDataWithRootObject:root];
     
 }
@@ -184,6 +184,15 @@
     // Show the response body tab after request is made
     NSTabView *parentTabView = [responseTab tabView];
     [parentTabView selectTabViewItemAtIndex:(1)];
+}
+
+- (IBAction)clearRequestHeaders:(id)sender {
+    if([[reqHeaderTableDatasource dictionary] count] <= 0){
+        return;
+    }
+    [reqHeaderTableDatasource setHeaderView:requestHeadersView];
+    [reqHeaderTableDatasource clearHeaders];
+    
 }
 
 - (IBAction)addReqHeader:(id)sender {

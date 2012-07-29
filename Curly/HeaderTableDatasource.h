@@ -14,6 +14,7 @@
 @property NSTableView *headerView;
 
 - (void)addHeaderToTable:(id)key value:(id)value;
+- (void)clearHeaders;
 
 
 @end

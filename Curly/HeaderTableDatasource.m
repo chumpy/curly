@@ -33,7 +33,13 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
         return [dictionary objectForKey:[myKeys objectAtIndex:rowIndex]];
     }
     
-}   
+}
+
+- (void) clearHeaders
+{
+    [dictionary removeAllObjects];
+    [headerView reloadData];
+}
 
 - (void)addHeaderToTable:(NSString*)key value:(NSString*)value
 {
