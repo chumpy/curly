@@ -28,6 +28,8 @@
 @property (weak) IBOutlet NSTextField *addReqHeaderKeyText;
 - (IBAction)clearRequestHeaders:(id)sender;
 
+@property (unsafe_unretained) IBOutlet NSTextView *consoleLog;
+
 
 - (IBAction)addReqHeader:(id)sender;
 @property (weak) IBOutlet NSTextField *addReqHeaderValueText;

@@ -10,6 +10,7 @@
 
 
 @implementation CurlyDocument
+@synthesize consoleLog;
 @synthesize addReqHeaderValueText;
 @synthesize useBasicAuth;
 @synthesize basicAuthUsername;
@@ -22,7 +23,8 @@
 @synthesize responseHeadersView;
 @synthesize headerTableDatasource;
 @synthesize reqHeaderTableDatasource;
-@synthesize addReqHeaderKeyText;@synthesize url;
+@synthesize addReqHeaderKeyText;
+@synthesize url;
 @synthesize root;
 
 - (id)init
@@ -76,6 +78,10 @@
         [responseTextView setString:[root objectForKey:@"response_body"]];
     
     }
+    if([root objectForKey:@"console_log"] != nil)
+    {
+        [consoleLog setString:[root objectForKey:@"console_log"]];
+    }
     if([root objectForKey:@"request_headers"] != nil)
     {
         [reqHeaderTableDatasource setHeaderView:requestHeadersView];
@@ -112,6 +118,7 @@
     [root setObject:[url stringValue] forKey:@"url"];
     [root setObject:[requestTextView string] forKey:@"request_body"];  
     [root setObject:[responseTextView string] forKey:@"response_body"];
+    [root setObject:[consoleLog string] forKey:@"console_log"];
     if([reqHeaderTableDatasource dictionary] != nil)
     {
         [root setObject:[reqHeaderTableDatasource dictionary] forKey:@"request_headers"];
@@ -158,13 +165,24 @@
     
 }
 
+- (void)logInConsole:(NSString *)message
+{
+    NSMutableString *log = [NSMutableString stringWithCapacity:[[consoleLog string] length]];
+    [log appendString:[consoleLog string]];
+    [log appendString:message];
+    [log appendString:@"\n"];
+    [consoleLog setString:log];
+}
+
 - (IBAction)go:(NSButton *)sender {
+    [consoleLog setString:[NSString string]];
     NSMutableURLRequest *req;
     NSError *requestError;
     NSHTTPURLResponse *urlResponse;
     [self setupRequest:&req urlResponse_p:&urlResponse];
-   
-    if([useBasicAuth state] == 1) {
+    [self logInConsole:[NSString stringWithFormat:@"Using request method %@ for URL %@", [req HTTPMethod], [[req URL] description]]];
+        if([useBasicAuth state] == 1) {
+        [self logInConsole:@"Using Basic Auth"];
         NSString *authStr = [NSString stringWithFormat:@"%@:%@", [basicAuthUsername stringValue], [basicAuthPassword stringValue]];
         NSData *authData = [authStr dataUsingEncoding:NSASCIIStringEncoding];
         NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64EncodingWithLineLength:80]];
@@ -173,8 +191,15 @@
     }
     
     
+    
+    
     //make requst
     NSData *returnData = [NSURLConnection  sendSynchronousRequest:req returningResponse:&urlResponse error:&requestError];
+    [self logInConsole:[NSString stringWithFormat:@"Received status code of %ld (%@)",[urlResponse statusCode], [NSHTTPURLResponse localizedStringForStatusCode:[urlResponse statusCode]]]];
+    if(requestError != nil)
+    {
+        [self logInConsole:[NSString stringWithFormat:@"Error: %@", [requestError localizedDescription]]];
+    }
    
     //update response body
     [responseTextView setString:[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding]];
