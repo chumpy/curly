@@ -12,7 +12,7 @@
 				<string>curly</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>icon</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/xml</string>
@@ -61,5 +61,25 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeDescription</key>
+			<string>Curly File</string>
+			<key>UTTypeIconFile</key>
+			<string>icon</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>curly</string>
+				</array>
+				<key>public.mime-type</key>
+				<array>
+					<string>text/xml</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

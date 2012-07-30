@@ -36,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		3E2B49DF15C335CC0063FD43 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		3E341DB315C617B3006630A1 /* Curly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Curly.entitlements; sourceTree = "<group>"; };
 		3E68200015A6BFD6004EB548 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		3E68200115A6BFD6004EB548 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		3E7F2FE315C4675100BD42BB /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		3EC1420E1537F8D200B96E46 /* Curly */ = {
 			isa = PBXGroup;
 			children = (
+				3E341DB315C617B3006630A1 /* Curly.entitlements */,
 				3E68200015A6BFD6004EB548 /* NSData+Base64.h */,
 				3E68200115A6BFD6004EB548 /* NSData+Base64.m */,
 				3ED54C1A15A011EB00D7E399 /* HeaderTableDatasource.h */,
@@ -404,6 +406,7 @@
 		3EC1423D1537F8D300B96E46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Curly/Curly.entitlements;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -419,6 +422,7 @@
 		3EC1423E1537F8D300B96E46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Curly/Curly.entitlements;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
